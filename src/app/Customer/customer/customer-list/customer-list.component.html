@@ -1,10 +1,10 @@
 <filter-textbox (changed)="filter($event)"></filter-textbox>
 <br />
 <br />
-<table class="table table-hover">
+<table class="table table-hover cust-table">
     <thead>
         <tr>
-            <th (click)="sort('name')">Name</th>
+            <th (click)="sort('name')" class="first-column">Name</th>
             <th (click)="sort('city')">City</th>
             <th (click)="sort('orderTotal')">Order Total</th>
         </tr>
@@ -19,7 +19,7 @@
         <td>{{ cust.orderTotal | currency:currencyCode:'symbol'}}</td>
     </tr>
     <tr *ngIf="filteredCustomers && filteredCustomers.length">
-        <td colspan="2">&nbsp;</td>
+        <td colspan="2">Total</td>
         <td>
             {{ customersOrderTotal | currency:currencyCode:'symbol'}}
         </td>
@@ -28,5 +28,6 @@
         <td colspan="4">No customers found</td>
     </tr>
 </table>
+<br/>
 Number of Customers: {{ filteredCustomers.length }}
 <br />

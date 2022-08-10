@@ -1,0 +1,21 @@
+tr {
+    border-bottom: 1px solid #ddd;
+  }
+
+tr:hover {background-color: #D6EEEE;}
+
+th{
+    background-color: gray;
+}
+
+.lasttd{
+    border-top: solid;
+}
+
+.first-column{
+    width:50%;
+}
+
+th, td {
+    padding: 10px;
+  }
